@@ -1,0 +1,7 @@
+
+
+module.exports = {
+    "NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN": "https://adityashop123.myshopify.com",
+    "NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN": "61921ea93aba563e845ef290cb5916c6",
+    "NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION": "2023-04"
+}

@@ -1,9 +1,10 @@
 import { ZeusScalars, Chain } from './zeus';
 import { createStorefrontClient } from '@shopify/hydrogen-react';
+import { NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN, NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION, NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN } from "../../../test.js";
 
-export const storeDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN as string;
-export const publicStorefrontToken = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN as string;
-export const storefrontApiVersion = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION as string;
+export const storeDomain = NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN as string;
+export const publicStorefrontToken = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN as string;
+export const storefrontApiVersion = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION as string;
 
 const { getStorefrontApiUrl, getPublicTokenHeaders } = createStorefrontClient({
   storeDomain,

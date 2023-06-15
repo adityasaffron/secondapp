@@ -1,11 +1,12 @@
 import * as dotenv from 'dotenv';
 import { execSync } from 'child_process';
-
+import pkg from "./test.js";
+const { NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN, NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION, NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN } = pkg;
 dotenv.config();
 
-const storeDomain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN;
-const publicStorefrontToken = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN;
-const storefrontApiVersion = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION;
+const storeDomain = NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN;
+const publicStorefrontToken = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN;
+const storefrontApiVersion = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION;
 
 const apiEndpoint = storeDomain + `/api/${storefrontApiVersion}/graphql.json`;
 
