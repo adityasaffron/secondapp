@@ -1,10 +1,9 @@
 import { ZeusScalars, Chain } from './zeus';
 import { createStorefrontClient } from '@shopify/hydrogen-react';
-import pkg from "../../../test.js";
-const { NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN, NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION, NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN } = pkg;
-export const storeDomain = NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN as string;
-export const publicStorefrontToken = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_TOKEN as string;
-export const storefrontApiVersion = NEXT_PUBLIC_SHOPIFY_STOREFRONT_API_VERSION as string;
+
+export const storeDomain = "https://adityashop123.myshopify.com" as string;
+export const publicStorefrontToken = "61921ea93aba563e845ef290cb5916c6" as string;
+export const storefrontApiVersion = "2023-04" as string;
 
 const { getStorefrontApiUrl, getPublicTokenHeaders } = createStorefrontClient({
   storeDomain,
