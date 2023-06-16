@@ -12,8 +12,7 @@ export async function fetchCollections() {
           node: {
             id: true,
             title: true,
-            handle: true,
-            description: true,
+            handle: true
           },
         },
       },
@@ -30,7 +29,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const fetchCollectionsData = async () => {
-      const collectionsData = await fetchCollections();
+      const collectionsData:any = await fetchCollections();
       setCollections(collectionsData);
     };
 
@@ -41,7 +40,7 @@ export function HeroSection() {
     <section>
       <h2>Collections</h2>
       <ul>
-        {collections.map((collection) => (
+        {collections.map((collection:any) => (
           <li key={collection.node.id} style={{ cursor: 'pointer' }}>
             <Link href={`/collections/${collection.node.handle}`}>
               <div>{collection.node.title}</div>

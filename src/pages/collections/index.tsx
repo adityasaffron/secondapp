@@ -31,7 +31,7 @@ export default function CollectionPage() {
         const  data  = await storefront.query(qq);
       
         
-      const { collectionByHandle } = data;
+      const  collectionByHandle:any  = data.collectionByHandle;
 
     
 
@@ -39,13 +39,13 @@ export default function CollectionPage() {
     };
 
     fetchProducts();
-  }, []);
+  });
 
   return (
     <section>
       <h2>Products</h2>
       <ul>
-        {products.map((product) => (
+        {products.map((product:any) => (
           <li key={product.node.id}>
             <div>{product.node.title}</div>
             
