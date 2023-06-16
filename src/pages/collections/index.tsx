@@ -11,7 +11,7 @@ export default function CollectionPage() {
   useEffect(() => {
     const fetchProducts = async () => {
        
-        let qq:any = `query {
+        const qq:any = `query {
             collectionByHandle(handle: "${handle}") {
               products(first: 10) {
                 edges {
