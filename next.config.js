@@ -9,6 +9,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/collections/:handle',
+        destination: '/collections/[handle]',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

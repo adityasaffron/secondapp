@@ -7,7 +7,7 @@ const mainMenuItems: { text: string; href: string }[] = [
   {
     text: 'Products',
     href: '/products',
-  },
+  }
 ];
 
 export function HeaderSection() {

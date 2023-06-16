@@ -20,7 +20,11 @@
     "prebuild": "npm run codegen"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "@shopify/hydrogen": "^2023.4.4",
     "next": "^13.3.0",
+    "react-query": "^3.39.3",
+    "react-responsive-carousel": "^3.2.23",
     "zeus": "^3.3.1"
   },
   "devDependencies": {
