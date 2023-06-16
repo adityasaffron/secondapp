@@ -12,7 +12,7 @@ export default function CollectionPage() {
     const fetchProducts = async () => {
        
         let qq = `query {
-            collectionByHandle(handle: ${JSON.stringify(handle)}) {
+            collectionByHandle(handle: "${handle}") {
               products(first: 10) {
                 edges {
                   node {
