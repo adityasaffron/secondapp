@@ -1,6 +1,7 @@
 import { storefront } from '@site/utilities/storefront';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+
 export async function fetchCollections() {
   const { collections } = await storefront.query({
     collections: [
@@ -29,7 +30,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const fetchCollectionsData = async () => {
-      const collectionsData:any = await fetchCollections();
+      const collectionsData = await fetchCollections();
       setCollections(collectionsData);
     };
 
@@ -37,17 +38,19 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section>
-      <h2>Collections</h2>
-      <ul>
-        {collections.map((collection:any) => (
-          <li key={collection.node.id} style={{ cursor: 'pointer' }}>
-            <Link href={`/collections/${collection.node.handle}`}>
-              <div>{collection.node.title}</div>
+    <nav className="flex justify-between items-center py-4 px-8 bg-gray-200">
+      <h2 className="text-2xl font-bold">Collections</h2>
+      <ul className="flex space-x-4">
+        {collections.map((collection) => (
+          <li key={collection.node.id }>
+            <Link href={`/collections/${collection.node.handle}` }   className="text-gray-800 hover:text-gray-600">
+             
+                {collection.node.title}
+           
             </Link>
           </li>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 }

@@ -6,10 +6,12 @@ interface Props {
 }
 
 export function StoreLayout(props: Props) {
+  console.log(props,'propspropspropspropspropspropspropspropspropspropsprops');
+  
   return (
     <>
       <HeaderSection />
-      <main className="mx-auto max-w-7xl p-6 lg:px-8">{props.children}</main>
+      <main className="mx-auto max-w-7xl">{props.children}</main>
     </>
   );
 }
